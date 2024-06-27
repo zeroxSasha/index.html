@@ -1,6 +1,12 @@
+import "../styles/experiences.scss"
+
 const Experiences = () => {
   return (
-    <section>Experiences</section>
+    <section className="Experiences">
+      <p className="Experiences__text">
+        Under development ... 🚧 <br/>(no experience in a company yet)
+      </p>
+    </section>
   )
 }
 
