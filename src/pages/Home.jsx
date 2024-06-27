@@ -40,14 +40,16 @@ const Home = () => {
           <p className="Home__description__item">Software Engineer</p>
         </div>
       </div>
-      <Canvas className="Home__container3D">
-        <ambientLight intensity={1} />
-        <OrbitControls enableZoom={false} />
-        <Suspense fallback={null}>
-          <AnimatedCosmo />
-        </Suspense>
-        <Environment preset='sunset' />
-      </Canvas>
+      <div className="Home__container3D">
+        <Canvas>
+          <ambientLight intensity={1} />
+          <OrbitControls enableZoom={false} />
+          <Suspense fallback={null}>
+            <AnimatedCosmo />
+          </Suspense>
+          <Environment preset='sunset' />
+        </Canvas>
+      </div>
     </main>
   )
 }
