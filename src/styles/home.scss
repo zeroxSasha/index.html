@@ -1,18 +1,35 @@
 .Home {
+    display: flex;
+    gap: 2em;
+    align-items: center;
     &__text-block {
-
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 50%;
     }
     &__title {
-
+        &__item {
+            font-size: 5rem;
+            letter-spacing: 0.07em;
+            font-weight: 700;
+            color: rgb(242, 242, 242);
+        }
     }
     &__description {
-
+        &__item {
+            color: #eb6f92;
+            font-size: 3rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+        }
     }
     &__animation {
 
     }
-}
+    &__container3D {
+        flex: 1 1 50%;
+        canvas {
 
-#container3D {
-    height: 100vh;
+        }
+    }
 }
