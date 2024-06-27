@@ -1,8 +1,10 @@
 .Header {
 	margin:1.25em 1.25em 0 1.25em;
 	align-self: center;
+	transform: translateX(-6%);
 	background-color: transparent;
 	position: fixed;
+	z-index: 999;
 	top: 0;
 	nav {
 		ul {
