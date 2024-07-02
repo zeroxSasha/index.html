@@ -1,17 +1,22 @@
 .Header {
-	margin:1.25em 1.25em 0 1.25em;
+	margin: 1.25em 1.25em 0 1.25em;
 	align-self: center;
 	transform: translateX(-6%);
-	background-color: transparent;
 	position: fixed;
 	z-index: 999;
 	top: 0;
-	nav {
+	&__links {
+		display: flex;
+		background-color: rgba(31, 31, 31, 0.95);
+		border-radius: 0.5em;
 		ul {
 			display: flex;
 			gap: 2em;
 			align-items: center;
 		}
+	}
+	&__ham-menu {
+		display: none;
 	}
 }
 .navigation-link {
@@ -42,12 +47,12 @@
 		height: 0.5rem;
 		width: 0.5rem;
 		bottom: -1rem;
-		animation: moveToTheLeftToTheRight 0.8s;
+		animation: dotAnimation 0.8s;
 		animation-timing-function: ease;
 	}
 }
 
-@keyframes moveToTheLeftToTheRight {
+@keyframes dotAnimation {
 	0% {
 		transform: translate(0, 0);
 	}
@@ -65,9 +70,64 @@
 	transition: 0.1s ease;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-	
-}
-@media screen and (max-width: 479px) {
-
+@media screen and (max-width: 767px) {
+	.Header {
+		margin: 0;
+		align-self: flex-start;
+		transform: translateX(-150%);
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		width: 65vw;
+		height: 100%;
+		transition: 0.2s;
+		&__links {
+			display: flex;
+			height: 100%;
+			padding: 1.25em 0 0 1.25em;
+			background-color: rgba(31, 31, 31, 0.95);
+			border-radius: 0.5em;
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5em;
+				align-items: flex-start;
+			}
+		}
+		&__ham-menu {
+			display: flex;
+			width: 40px;
+			height: 30px;
+			position: fixed;
+			top: 1em;
+			left: 1em;
+			flex-direction: column;
+			justify-content: space-around;
+			z-index: 1000;
+			transition: 0.2s;
+			cursor: pointer;
+			span {
+				height: 4px;
+				transition: 0.1s;
+				transform-origin: left;
+				background-color: #d4d4d4;
+			}
+		}
+	}
+	.active.Header {
+		transform: translateX(0);
+	}
+	.active.Header__ham-menu {
+		left: 50vw;
+		span:nth-child(1) {
+			transform: rotate(45deg)  translateX(-5px);
+		}
+		span:nth-child(2) {
+			opacity: 0;
+		}
+		span:nth-child(3) {
+			transform: rotate(-45deg) translateX(-5px);
+		}
+	}
 }
