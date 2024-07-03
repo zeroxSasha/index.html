@@ -1,41 +1,71 @@
 .Contact {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2em;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    &__text {
+        flex: 1 1 0;
+    }
+    &__title {
+        text-align: center;
+        font-size: 3.5rem;
+        letter-spacing: 0.07em;
+        font-weight: 700;
+        color: rgb(242, 242, 242);
+        &::after {
+            position: fixed;
+            font-size: 6rem;
+            top: 30%;
+            left: 76%;
+            content: 'CONTACT';
+            color: rgba(161, 161, 161, 0.5);
+        }
+    }
+    &__links {
+        flex: 1 1 0;
+    }
     &__list {
         display: flex;
         flex-direction: column;
     }
     &__item {
-        margin: 0 0 1em 0;
+        margin: 0 0 1.5em 0;
+        min-width: 332px;
     }
     &__button {
         display: flex;
         align-items: center;
         position: relative;
-        //justify-content: center;
-        height: 4em;
-        width: 25em;
         border-radius: 0.3em;
         color: #fff;
         font-size: 1.2rem;
-        border: 2px solid rgba(255, 255, 255, 0.5);
         font-weight: 500;
         background-color: transparent;
         transition: 0.3s;
+        box-shadow: 0.5em 0.5em 0 0.1em #000000;
+        width: 100%;
         p {
+            flex: 1 1 auto;
             left: 50%;
             transform: translateX(-50%);
             position: absolute;
         }
         svg {
-            width: 3rem;
-            height: 3rem;
+            width: 3.5rem;
+            height: 3.5rem;
         }
         &:hover {
             scale: 1.15;
             border: 2px solid rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .Contact {
+        &__item {
+            min-width: 270px;
         }
     }
 }
