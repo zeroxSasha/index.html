@@ -1,0 +1,61 @@
+.About {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    &__text-block {
+
+    }
+    &__title {
+        font-size: 3.5rem;
+        letter-spacing: 0.07em;
+        font-weight: 700;
+        color: rgb(242, 242, 242);
+        &::after {
+            position: absolute;
+            font-size: 6rem;
+            top: 30%;
+            left: 80%;
+            content: 'ABOUT';
+            color: rgba(161, 161, 161, 0.5);
+        }
+    }
+    &__desc {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        color: #e4dcdc;
+    }
+    &__skills {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        img {
+            max-height: 3.3rem;
+        }
+        img:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About {
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        &__text-block {
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .About {
+        &__skills {
+            img {
+                max-height: 2.5rem;
+            }
+        }
+    }
+}
