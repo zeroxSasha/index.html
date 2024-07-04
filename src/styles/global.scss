@@ -34,17 +34,18 @@ img {
 html,
 body {
 	height: 100%;
+	overflow-x: hidden;
 }
 html {
 	font-size: 16px;
 }
 body {
 	line-height: 1.5;
-	overflow-x: hidden;
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	background-color: #1f1f1f;
+	position: relative;
 }
 
 /* custom styles */
@@ -74,5 +75,11 @@ a {
 	&:hover {
 		transition: 0.2s;
 		color: rgba(255, 255, 255, 0.65);
+	}
+}
+
+@media screen and (max-height: 670px) and (min-width: 768px) {
+	body {
+		padding-top: 15vw;
 	}
 }
