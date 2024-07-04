@@ -9,11 +9,14 @@ import Footer from "./components/Footer";
 
 import { Route, useNavigation, Routes } from 'react-router-dom';
 import { useState, useEffect } from "react";
+import useWindowSize from "./hooks/useWindowSize";
 
 function App() {
+  const { width } = useWindowSize();
+
   return (
     <div className="App">
-      <Header />
+      <Header width={width} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
