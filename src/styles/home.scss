@@ -2,6 +2,17 @@
     display: flex;
     gap: 2em;
     align-items: center;
+    &::after {
+        content: '0xSasha';
+        position: absolute;
+        font-size: 8rem;
+        letter-spacing: 0.4em;
+        font-weight: 700;
+        top: 35%;
+        left: 25%;
+        color: rgba(161, 161, 161, 0.02);
+        transform: rotateZ(30deg)
+    }
     &__text-block {
         display: flex;
         flex-direction: column;
