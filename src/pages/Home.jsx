@@ -8,7 +8,7 @@ const Cosmo = () => {
   const gltf = useLoader(GLTFLoader, "./Cosmo/scene.gltf");
   return (
     <>
-      <primitive object={gltf.scene} scale={1.2} position={[0, -1.2, 0]} />
+      <primitive object={gltf.scene} scale={1.35} position={[0, -1.5, 0]} />
     </>
   );
 };
