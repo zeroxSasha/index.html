@@ -64,6 +64,12 @@
 
 @media screen and (max-width: 479px) {
     .Contact {
+        &__text {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 25%;
+        }
         &__item {
             min-width: 270px;
         }
