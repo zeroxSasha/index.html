@@ -10,10 +10,10 @@ const Contact = () => {
   const [hover, setHover] = useState(null);
 
   const socials = [
-    {name: GitHub, borderColor: "7px solid #42a2fd", onHover: "#908caa", linkto: "https://github.com/0xSashaa"},
-    {name: Twitter, borderColor: "7px solid #38e54d", onHover: "#1DA1F2", linkto: "https://twitter.com/0xSashaa"},
-    {name: LinkedIn, borderColor: "7px solid #fdff00", onHover: "#0077b5", linkto: "https://www.linkedin.com/in/0xsasha/"},
-    {name: MailTo, borderColor: "7px solid #b00020", onHover: "#eb6f92", linkto: "mailto:lxudrr@gmail.com"}
+    {image: GitHub, name: "GitHub", borderColor: "7px solid #42a2fd", onHover: "#908caa", linkto: "https://github.com/0xSashaa"},
+    {image: Twitter, name: "Twitter", borderColor: "7px solid #38e54d", onHover: "#1DA1F2", linkto: "https://twitter.com/0xSashaa"},
+    {image: LinkedIn, name: "LinkedIn", borderColor: "7px solid #fdff00", onHover: "#0077b5", linkto: "https://www.linkedin.com/in/0xsasha/"},
+    {image: MailTo, name: "MailTo", borderColor: "7px solid #b00020", onHover: "#eb6f92", linkto: "mailto:lxudrr@gmail.com"}
   ]
 
   return (
@@ -31,8 +31,8 @@ const Contact = () => {
                   onMouseLeave={() => setHover(null)}
                   style={{ border: item.borderColor }}
                 >
-                  <item.name color={ hover === index ? item.onHover : "#ffffff" } />
-                  <p style={{ color: hover === index ? item.onHover : "#ffffff" }}>{ item.name.name.toLowerCase() }</p>
+                  <item.image color={ hover === index ? item.onHover : "#ffffff" } />
+                  <p style={{ color: hover === index ? item.onHover : "#ffffff" }}>{ item.name }</p>
                 </button>
               </a>
             </li>
