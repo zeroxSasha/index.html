@@ -5,7 +5,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import '../styles/home.scss';
 
 const Cosmo = () => {
-  const gltf = useLoader(GLTFLoader, "./Cosmo/scene.gltf");
+  const gltf = useLoader(GLTFLoader, `${import.meta.env.BASE_URL}Cosmo/scene.gltf`);
   return (
     <>
       <primitive object={gltf.scene} scale={1.35} position={[0, -1.5, 0]} />
