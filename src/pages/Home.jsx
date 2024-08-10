@@ -1,33 +1,8 @@
-import { Suspense, useRef } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { Environment, OrbitControls } from "@react-three/drei";
+import AnimatedCosmo from "../assets/cosmoModel/AnimatedCosmo";
 import '../styles/home.scss';
-
-const Cosmo = () => {
-  const gltf = useLoader(GLTFLoader, `${import.meta.env.BASE_URL}Cosmo/scene.gltf`);
-  return (
-    <>
-      <primitive object={gltf.scene} scale={1.35} position={[0, -1.5, 0]} />
-    </>
-  );
-};
-
-function AnimatedCosmo() {
-  const cosmoRef = useRef();
-
-  useFrame(() => {
-    if (cosmoRef.current) {
-      cosmoRef.current.rotation.y += 0.005;
-    }
-  });
-
-  return (
-    <group ref={cosmoRef}>
-      <Cosmo />
-    </group>
-  );
-}
 
 const Home = () => {
   return (
