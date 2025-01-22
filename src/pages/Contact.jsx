@@ -10,7 +10,7 @@ const Contact = () => {
   const [hover, setHover] = useState(null);
 
   const socials = [
-    {image: GitHub, name: "GitHub", borderColor: "7px solid #42a2fd", onHover: "#908caa", linkto: "https://github.com/0xSashaa"},
+    {image: GitHub, name: "GitHub", borderColor: "7px solid #42a2fd", onHover: "#908caa", linkto: "https://github.com/zeroxSasha"},
     {image: Twitter, name: "Twitter", borderColor: "7px solid #38e54d", onHover: "#1DA1F2", linkto: "https://twitter.com/0xSashaa"},
     {image: LinkedIn, name: "LinkedIn", borderColor: "7px solid #fdff00", onHover: "#0077b5", linkto: "https://www.linkedin.com/in/0xsasha/"},
     {image: MailTo, name: "MailTo", borderColor: "7px solid #b00020", onHover: "#eb6f92", linkto: "mailto:lxudrr@gmail.com"}
